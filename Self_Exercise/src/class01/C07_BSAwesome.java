@@ -1,7 +1,7 @@
 package class01;
 
 // 注意题目是随便一个最小值
-public class C06_BSAwesome {
+public class C07_BSAwesome {
     public static int getLessIndex(int[] arr) {
         // 异常边界
         if (arr == null || arr.length == 0) {
@@ -18,5 +18,19 @@ public class C06_BSAwesome {
         // 不是第一也不是最后1个
         int left = 1;
         int right = arr.length - 2;
+        int mid = 0;
+        while(left < right) {
+            mid = (left + right) / 2;
+            // 调整右边界
+            if (arr[mid] > arr[mid - 1]) {
+                right = mid - 1;
+            // 调整左边界
+            } else  if (arr[mid] > arr[mid + 1]){
+                left = mid + 1;
+            } else {
+                return mid;
+            }
+        }
+        return left;
     }
 }

@@ -26,7 +26,8 @@ public class Code06_BSAwesome {
 				return mid;
 			}
 		}
-		return left;
+		// 有可能左右会移动到同一个边界，那么此时就直接返回left或right都可以
+		return right;
 	}
 
 	// 验证得到的结果，是不是局部最小
@@ -72,5 +73,4 @@ public class Code06_BSAwesome {
 		}
 		System.out.println("测试结束");
 	}
-
 }
