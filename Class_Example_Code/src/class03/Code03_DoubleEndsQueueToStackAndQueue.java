@@ -166,7 +166,7 @@ public class Code03_DoubleEndsQueueToStackAndQueue {
 					myQueue.push(numq);
 					queue.offer(numq);
 				} else {
-					if (Math.random() < 0.5) {
+					if (Math.random() <5) {
 						myQueue.push(numq);
 						queue.offer(numq);
 					} else {

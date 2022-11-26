@@ -52,6 +52,7 @@ public class Code01_ReverseList {
 		return pre;
 	}
 
+	// 暴力方法：把所有元素加载到一个新的List里。
 	public static Node testReverseLinkedList(Node head) {
 		if (head == null) {
 			return null;
