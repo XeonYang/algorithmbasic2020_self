@@ -1,7 +1,7 @@
 package class01;
 
 // 注意题目是随便一个最小值
-public class C07_BSAwesome {
+public class C06_BSAwesome {
     public static int getLessIndex(int[] arr) {
         // 异常边界
         if (arr == null || arr.length == 0) {
@@ -31,6 +31,7 @@ public class C07_BSAwesome {
                 return mid;
             }
         }
+        // 有可能左右会移动到同一个边界，那么此时就直接返回left或right都可以
         return left;
     }
 }

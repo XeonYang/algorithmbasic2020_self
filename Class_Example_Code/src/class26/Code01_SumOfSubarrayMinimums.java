@@ -23,6 +23,7 @@ public class Code01_SumOfSubarrayMinimums {
 	}
 
 	// 没有用单调栈
+	// 开头变，结尾变。也可以写成开头不变，结尾变的。
 	public static int subArrayMinSum2(int[] arr) {
 		// left[i] = x : arr[i]左边，离arr[i]最近，<=arr[i]，位置在x
 		int[] left = leftNearLessEqual2(arr);

@@ -20,7 +20,21 @@ public class Code05_BSNearLeft {
 		}
 		return index;
 	}
-
+	public static int nearestIndex2(int[] arr, int value) {
+		int L = 0;
+		int R = arr.length - 1;
+		int index = -1; // 记录最左的对号
+		while (L <= R) { // 至少一个数的时候
+			int mid = L + ((R - L) >> 1);
+			if (arr[mid] >= value) {
+				index = mid;
+				R = mid - 1;
+			} else {
+				L = mid + 1;
+			}
+		}
+		return index;
+	}
 	// for test
 	public static int test(int[] arr, int value) {
 		for (int i = 0; i < arr.length; i++) {

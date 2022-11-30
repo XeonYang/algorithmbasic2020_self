@@ -1,6 +1,6 @@
 package class01;
 
-public class C06_BSNearRight {
+public class C05_BSNearRight {
     public static int nearestIndex(int[] arr, int value) {
         int L = 0;
         int R = arr.length - 1;
